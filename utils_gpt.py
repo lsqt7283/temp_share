@@ -11,17 +11,17 @@ def _deploy_gpt_azure(deployment_name='gpt-4o'):
     try:
         AZURE_CLIENT_ID = os.environ['AZURE_CLIENT_ID']
     except KeyError:
-        os.environ['AZURE_CLIENT_ID'] = "e705d782-5ebf-4fc1-a678-f6af4143f386"
+        os.environ['AZURE_CLIENT_ID'] = ""
         AZURE_CLIENT_ID = os.environ['AZURE_CLIENT_ID']
     try:
         AZURE_CLIENT_SECRET = os.environ['AZURE_CLIENT_SECRET']
     except KeyError:
-        os.environ['AZURE_CLIENT_SECRET'] = "y568Q~ghgbREfiC1sK~pWjUDYjiSMiLrGsZOKaxP"
+        os.environ['AZURE_CLIENT_SECRET'] = ""
         AZURE_CLIENT_SECRET = os.environ['AZURE_CLIENT_SECRET']
     try:
         AZURE_TENANT_ID = os.environ['AZURE_TENANT_ID']
     except KeyError:
-        os.environ['AZURE_TENANT_ID'] = "a215a474-9220-4ff0-9325-2051322626b3"
+        os.environ['AZURE_TENANT_ID'] = ""
         AZURE_TENANT_ID = os.environ['AZURE_TENANT_ID']
     default_credential = DefaultAzureCredential()
     token = default_credential.get_token("https://cognitiveservices.azure.com/.default")
